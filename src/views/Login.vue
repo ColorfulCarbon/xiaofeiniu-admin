@@ -39,7 +39,7 @@ export default {
       this.$axios.get(url).then((res)=>{
         if(res.data.code==200){
           //把用户名存入vuex储存仓库
-          this.$store.commit('setAdminName',this.formData.aname)
+          this.$store.commit('setAdminName',this.formData.aname);
           this.$router.push('/main');//跳转
         }else{
           this.$alert('用户名或密码错误！','登录失败',{type:'error'}).then(()=>{}).catch(()=>{});
@@ -48,7 +48,7 @@ export default {
         console.log(err)
       })
     },
-    doCancel(){//清楚用户的输入
+    doCancel(){//清除用户的输入
       this.formData.aname="";
       this.formData.apwd="";
     }

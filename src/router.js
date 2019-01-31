@@ -21,7 +21,7 @@ import Security from './views/Security.vue'
 
 
 Vue.use(Router)
-//整个项目的路由词典：访问路径《=》视图组件（一一对应）
+//整个项目的路由词典：访问路径<=>视图组件（一一对应）
 export default new Router({
   routes: [
    {path:'/',redirect:'/login'},
